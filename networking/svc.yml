@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: internal
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: k8sbook

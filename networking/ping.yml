@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pingtest
+  labels:
+    app: pinger
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pinger
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: pinger
+    spec:
+      containers:
+      - image: ubuntu:latest
+        name: ubuntu-ctr
+        command:
+          - /bin/bash
+          - "-c"
+          - "sleep 60m"
