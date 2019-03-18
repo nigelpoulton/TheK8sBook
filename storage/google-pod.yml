@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: class-pod
+spec:
+  volumes:
+  - name: data
+    persistentVolumeClaim:
+      claimName: pv-ticket
+  containers:
+  - name: ubuntu-ctr
+    image: ubuntu:latest
+    command:
+    - /bin/bash
+    - "-c"
+    - "sleep 60m"
+    volumeMounts:
+    - mountPath: /data
+      name: data

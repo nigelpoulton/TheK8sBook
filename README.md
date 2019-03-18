@@ -1,6 +1,5 @@
 # The Kubernetes Book
 
-**Disclaimer:** I'll hold my hand up here... I forgot to create the repo when I published the Nov 2018 edition of the book. #Doh!
-As a result, I haven't had a chance to check the examples in here, but will do that ASAP!
+Lab files for March 2019 edition of **The Kubernetes Book**.
 
-Hope you're enjoying the book!
+Enjoy!
