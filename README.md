@@ -1,5 +1,5 @@
 # The Kubernetes Book
 
-Lab files for March 2019 edition of **The Kubernetes Book**.
+Lab files for **The Kubernetes Book**.
 
 Enjoy!
