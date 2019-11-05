@@ -9,6 +9,7 @@ spec:
   ports:
   - port: 8080
     nodePort: 30001
+    targetPort: 8080
     protocol: TCP
   selector:
     app: hello-world

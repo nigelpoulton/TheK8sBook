@@ -20,6 +20,6 @@ spec:
     spec:
       containers:
       - name: hello-pod
-        image: nigelpoulton/k8sbook:edge
+        image: nigelpoulton/k8sbook:latest
         ports:
         - containerPort: 8080

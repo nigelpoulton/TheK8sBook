@@ -1,0 +1,11 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: test-conf
+data:
+  test.conf: |
+    env = plex-test
+    endpoint = 0.0.0.0:31001
+    char = utf8
+    vault = PLEX/test
+    log-size = 512M
