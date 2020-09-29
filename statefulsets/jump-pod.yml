@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: jump-pod
+spec:
+  terminationGracePeriodSeconds: 1
+  containers:
+  - image: nigelpoulton/curl:1.0
+    name: jump-ctr
+    tty: true
+    stdin: true
