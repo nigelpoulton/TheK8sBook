@@ -1,0 +1,16 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: sc-fast-repl
+provisioner: pd.csi.storage.gke.io
+parameters:
+  type: pd-ssd
+  replication-type: regional-pd
+volumeBindingMode: WaitForFirstConsumer
+reclaimPolicy: Retain
+#allowedTopologies:
+#- matchLabelExpressions:
+#  - key: topology.kubernetes.io/zone
+#    values:
+#    - europe-west2-b
+#    - europe-west2-c

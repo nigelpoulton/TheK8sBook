@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  namespace: shield
+  name: default
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: triskelion
+  labels:
+    env: marvel
+  namespace: shield
+spec:
+  containers:
+  - image: nigelpoulton/k8sbook:shield-01
+    name: bus-ctr
+    ports:
+    - containerPort: 8080
+    imagePullPolicy: Always

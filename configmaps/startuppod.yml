@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: startup-pod
+  labels:
+    chapter: configmaps
+spec:
+  containers:
+    - name: args1
+      image: busybox
+      command: [ "/bin/sh", "-c", "echo First name $(FIRSTNAME) last name $(LASTNAME)", "wait" ]
+      env:
+        - name: FIRSTNAME
+          valueFrom:
+            configMapKeyRef:
+              name: multimap
+              key: given
+        - name: LASTNAME
+          valueFrom:
+            configMapKeyRef:
+              name: multimap
+              key: family

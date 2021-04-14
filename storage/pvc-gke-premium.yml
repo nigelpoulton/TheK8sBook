@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-prem
+spec:
+  accessModes:
+  - ReadWriteOnce
+  storageClassName: premium-rwo
+  resources:
+    requests:
+      storage: 10Gi

@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: mcu-paths
+spec:
+  rules:
+  - host: mcu.com
+    http:
+      paths:
+      - path: /shield
+        pathType: Prefix
+        backend:
+          service:
+            name: shield
+            port:
+              number: 8080
+      - path: /hydra
+        pathType: Prefix
+        backend:
+          service:
+            name: hydra
+            port:
+              number: 8080

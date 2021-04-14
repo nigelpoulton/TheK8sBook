@@ -1,0 +1,8 @@
+apiVersion: nigelpoulton.com/v1
+kind: EpicResource
+metadata:
+  name: tkb
+spec:
+  bookTitle: "The Kubernetes Book"
+  topic: Kubernetes
+  edition: 2
