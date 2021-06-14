@@ -5,6 +5,7 @@ metadata:
   labels:
     chapter: configmaps
 spec:
+  restartPolicy: OnFailure
   containers:
     - name: args1
       image: busybox

@@ -6,11 +6,11 @@ spec:
   replicas: 10
   selector:
     matchLabels:
-      app: hello-world
+      chapter: services
   template:
     metadata:
       labels:
-        app: hello-world
+        chapter: services
     spec:
       containers:
       - name: hello-ctr
