@@ -1,5 +1,5 @@
 apiVersion: nigelpoulton.com/v1
-kind: EpicResource
+kind: Book
 metadata:
   name: tkb
 spec:
