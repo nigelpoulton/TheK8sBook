@@ -7,6 +7,8 @@ spec:
   selector:
     matchLabels:
       app: hello-world
+  revisionHistoryLimit: 5
+  progressDeadlineSeconds: 300
   minReadySeconds: 10
   strategy:
     type: RollingUpdate
