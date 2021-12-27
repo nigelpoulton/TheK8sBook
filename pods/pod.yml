@@ -8,6 +8,6 @@ metadata:
 spec:
   containers:
   - name: hello-ctr
-    image: nigelpoulton/k8sbook:latest
+    image: nigelpoulton/k8sbook:1.0
     ports:
     - containerPort: 8080
