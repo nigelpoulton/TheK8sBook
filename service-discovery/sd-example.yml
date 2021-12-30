@@ -59,21 +59,6 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: manchester
-  namespace: dev 
-  labels:
-    event: manchester
-spec:
-  type: LoadBalancer
-  ports:
-  - port: 80
-    targetPort: 8080 
-  selector:
-    event: manchester
----
-apiVersion: v1
-kind: Service
-metadata:
   name: ent
   namespace: dev
 spec:
