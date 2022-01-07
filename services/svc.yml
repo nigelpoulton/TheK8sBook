@@ -5,6 +5,10 @@ metadata:
   labels:
     chapter: services
 spec:
+# ipFamilyPolicy: PreferDualStack
+# ipFamilies:
+# - IPv4
+# - IPv6
   type: NodePort
   ports:
   - port: 8080
