@@ -1,7 +1,7 @@
 kind: ConfigMap
 apiVersion: v1
 metadata:
-  name: test-conf
+  name: test-config
 data:
   test.conf: |
     env = plex-test
