@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dual-stack-svc
+spec:
+  ipFamilyPolicy: PreferDualStack
+  type: ClusterIP
+  ports:
+  - port: 8080
+    protocol: TCP
+  selector:
+    app: hello-world
