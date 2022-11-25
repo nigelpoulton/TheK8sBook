@@ -24,7 +24,7 @@ Once KinD is installed, you can deploy a new KinD cluster. This involves two ste
 
 #### Create the KinD config file
 
-Create a new file in your current directory called `kind.yml` with the following config. Feel free to use newer versions of the two images, but you must include the digests (different digests exist for different images/architectures). The image repo is [here](https://hub.docker.com/r/kindest/node) and the digests included in the example below are for `linux/arm64`.
+Create a new file in your current directory called `kind.yml` with the following config. Feel free to use newer versions of the two images, but you may have to include the digests (different digests exist for different images/architectures). The image repo is [here](https://hub.docker.com/r/kindest/node).
 
 ```
 kind: Cluster
@@ -34,9 +34,9 @@ networking:
   ipFamily: dual
 nodes:
 - role: control-plane
-  image: kindest/node:v1.25.3@sha256:5a781e2fe307fa77b7e9babd83cce628d6a840b42130f81ee7302140cfaa5fa1
+  image: kindest/node:v1.25.3
 - role: worker
-  image: kindest/node:v1.25.3@sha256:5a781e2fe307fa77b7e9babd83cce628d6a840b42130f81ee7302140cfaa5fa1
+  image: kindest/node:v1.25.3
 ```
 
 #### Deploy the KinD cluster
