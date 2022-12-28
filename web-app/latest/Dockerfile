@@ -1,4 +1,5 @@
-FROM node:current-slim
+# Can't be from slim image as need tools for some of the examples
+FROM node:current-alpine
 
 LABEL MAINTAINER=nigelpoulton@hotmail.com
 
