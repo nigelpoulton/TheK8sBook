@@ -1,0 +1,8 @@
+apiVersion: nigelpoulton.com/v1
+kind: Book
+metadata:
+  name: kcna
+spec:
+  bookTitle: "The KCNA Book"
+  topic: Certifications
+  edition: 1
