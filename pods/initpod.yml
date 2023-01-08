@@ -7,7 +7,7 @@ metadata:
 spec:
   initContainers:
   - name: init-ctr
-    image: busybox
+    image: busybox:1.28.4
     command: ['sh', '-c', 'until nslookup k8sbook; do echo waiting for k8sbook service; sleep 1; done; echo Service found!']
   containers:
     - name: web-ctr
