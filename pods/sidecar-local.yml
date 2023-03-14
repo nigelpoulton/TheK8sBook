@@ -1,3 +1,6 @@
+# Some network drivers and laptop VM implementations cause issues with Service port mapping
+# Minikube users may have to `minikube service svc-sidecar` to be able to access on `localhost:30001`
+# Other users may have to run `kubectl port-forward service/svc-sidecar 30001:80`
 apiVersion: v1
 kind: Pod
 metadata:
