@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: psa-pod
+  namespace: psa-test
+spec:
+  containers:
+  - name: psa-ctr
+    image: nginx
+    securityContext:
+      privileged: true
