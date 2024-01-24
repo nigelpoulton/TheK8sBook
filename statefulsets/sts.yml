@@ -3,7 +3,7 @@ kind: StatefulSet
 metadata:
   name: tkb-sts
 spec:
-  replicas: 3 
+  replicas: 3
   selector:
     matchLabels:
       app: web

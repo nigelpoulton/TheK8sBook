@@ -13,8 +13,6 @@ apiVersion: apps/v1
 metadata:
   name: enterprise
   namespace: dev
-  labels:
-    app: enterprise
 spec:
   selector:
     matchLabels:
@@ -37,8 +35,6 @@ apiVersion: apps/v1
 metadata:
   name: enterprise
   namespace: prod
-  labels:
-    app: enterprise
 spec:
   selector:
     matchLabels:

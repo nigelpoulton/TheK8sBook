@@ -5,7 +5,7 @@ metadata:
 spec:
   terminationGracePeriodSeconds: 1
   containers:
-  - image: nigelpoulton/curl:1.0
+  - image: registry.k8s.io/e2e-test-images/jessie-dnsutils:1.7
     name: jump-ctr
     tty: true
     stdin: true

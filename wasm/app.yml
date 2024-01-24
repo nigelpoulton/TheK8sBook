@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wasm-spin
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: wasm-spin
+  template:
+    metadata:
+      labels:
+        app: wasm-spin
+    spec:
+      runtimeClassName: rc-spin
+      containers:
+        - name: testwasm
+          image: nigelpoulton/k8sbook:wasm-0.1
+          command: ["/"]
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-wasm
+spec:
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  selector:
+    app: wasm-spin
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ing-wasm
+  annotations:
+    ingress.kubernetes.io/ssl-redirect: "false"
+spec:
+  ingressClassName: traefik
+  rules:
+    - http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-wasm
+                port:
+                  number: 80

@@ -34,9 +34,9 @@ networking:
   ipFamily: dual
 nodes:
 - role: control-plane
-  image: kindest/node:v1.25.3
+  image: kindest/node:v1.29.0
 - role: worker
-  image: kindest/node:v1.25.3
+  image: kindest/node:v1.29.0
 ```
 
 #### Deploy the KinD cluster
