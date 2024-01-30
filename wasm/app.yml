@@ -6,11 +6,11 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: wasm-spin
+      app: wasm
   template:
     metadata:
       labels:
-        app: wasm-spin
+        app: wasm
     spec:
       runtimeClassName: rc-spin
       containers:
@@ -28,7 +28,7 @@ spec:
       port: 80
       targetPort: 80
   selector:
-    app: wasm-spin
+    app: wasm
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
